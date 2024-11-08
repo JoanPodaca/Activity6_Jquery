@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.css"></script> 
+      
+</head>
+
+<style>
+    .collapsible {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid black;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        margin-top: 5px;
+
+    }
+
+    .active, .collapsible:hover {
+        background-color: #992400;
+    }
+
+    .content {
+        padding: 0 15px;
+        display: none; /* Initially hidden */
+        overflow: hidden;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+    }
+
+    .content p {
+        margin: 10px 0;
+    }
+
+    
+
+</style>
+
+<body>
+     <header
+        <h1 align=" center">JQUERY - JOAN PODACA</h1>
+ 
+    </header>
+    <section>
+        <nav class="navbar">
+            <ul>
+                <h3 class="wid">Widgets</h3>
+                <li><a href="../navigation/accordion.html">Accordion</a></li>
+                <li><a href="../navigation/autocomplete.html">Autocomplete</a></li>
+                <li><a href="../navigation/button.html">Button</a></li>
+                <li><a href="../navigation/checkboxradio.html">Checkboxradio</a></li>
+                <li><a href="../navigation/controlgroup.html">Controlgroup</a></li>
+                <li><a href="../navigation/datepicker.html">Datepicker</a></li> 
+                <li><a href="../navigation/dialog.html">Dialog</a></li>   
+                <li><a href="../navigation/menu.html">Menu</a></li>   
+                <li><a href="../navigation/progressbar.html">Progressbar</a></li>   
+                <li><a href="../navigation/selectmenu.html">Selectmenu</a></li>   
+                <li><a href="../navigation/slider.html">Slider</a></li>   
+                <li><a href="../navigation/spinner.html">Spinner</a></li>   
+                <li><a href="../navigation/tabs.html">Tabs</a></li>   
+                <li><a href="../navigation/tooltip.html">Tooltip</a></li>   
+
+            </ul>
+        </nav>
+       
+
+        <article>
+            <div class="cont">
+              <h1 align="left">SELECT MENU</h1>
+              <p><i>Displays collapsible content panels for presenting information in a limited amount of space.</i></p>
+            </div>
+            <br>
+            <br>
+            <div class="sample">
+                <h3>Examples</h3>
+                <br>
+                <br>
+    
+                <ul>
+                    <li><a href="">Default Functionality</a></li>
+                    <li><a href="">Custom Rendering</a></li>
+                    <li><a href="">Product Selection</a></li>
+                    
+    
+                    
+                </ul>
+            </div>
+            <div class="demo">
+ 
+                <form action="#">
+                 
+                  <fieldset>
+                    <label for="speed">Select a speed</label>
+                    <select name="speed" id="speed">
+                      <option>Slower</option>
+                      <option>Slow</option>
+                      <option selected="selected">Medium</option>
+                      <option>Fast</option>
+                      <option>Faster</option>
+                    </select>
+                    <br>
+                    <br>
+                 
+                    <label for="files">Select a file</label>
+                    <select name="files" id="files">
+                      <optgroup label="Scripts">
+                        <option value="jquery">jQuery.js</option>
+                        <option value="jqueryui">ui.jQuery.js</option>
+                      </optgroup>
+                      <optgroup label="Other files">
+                        <option value="somefile">Some unknown file</option>
+                        <option value="someotherfile">Some other file with a very long option text</option>
+                      </optgroup>
+                    </select>
+                    <br>
+                    <br>
+                 
+                    <label for="number">Select a number</label>
+                    <select name="number" id="number">
+                      <option>1</option>
+                      <option selected="selected">2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</option>
+                      <option>16</option>
+                      <option>17</option>
+                      <option>18</option>
+                      <option>19</option>
+                    </select>
+                    <br>
+                    <br>
+                 
+                    <label for="salutation">Select a title</label>
+                    <select name="salutation" id="salutation">
+                      <option disabled="" selected="">Please pick one</option>
+                      <option>Mr.</option>
+                      <option>Mrs.</option>
+                      <option>Dr.</option>
+                      <option>Prof.</option>
+                      <option>Other</option>
+                    </select>
+
+                   
+
+                  </fieldset>
+                 
+                </form>
+                 
+                </div>
+                 
+                 
+                 
+
+           <p>The Selectmenu widgets provides a styleable select element replacement. It will act as a proxy back to the original select element, controlling its state for form submission or serialization
+                <br>
+                <br>
+            The datasource is a native select element. Supports optgroups.</p>
+
+        </article>
+    </section>
+
+
+
+
+
+</body>
+</html>

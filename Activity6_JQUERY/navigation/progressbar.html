@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.css"></script> 
+    <style>
+        .ui-progressbar {
+          position: relative;
+        }
+        .progress-label {
+          position: absolute;
+          left: 50%;
+          top: 4px;
+          font-weight: bold;
+          text-shadow: 1px 1px 0 #fff;
+        }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          var progressbar = $( "#progressbar" ),
+            progressLabel = $( ".progress-label" );
+       
+          progressbar.progressbar({
+            value: false,
+            change: function() {
+              progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+            },
+            complete: function() {
+              progressLabel.text( "Complete!" );
+            }
+          });
+       
+          function progress() {
+            var val = progressbar.progressbar( "value" ) || 0;
+       
+            progressbar.progressbar( "value", val + 2 );
+       
+            if ( val < 99 ) {
+              setTimeout( progress, 80 );
+            }
+          }
+       
+          setTimeout( progress, 2000 );
+        } );
+        </script>
+    
+</head>
+
+
+
+<body>
+     <header
+        <h1 align=" center">JQUERY - JOAN PODACA</h1>
+ 
+    </header>
+    <section>
+        <nav class="navbar">
+            <ul>
+                <h3 class="wid">Widgets</h3>
+                <li><a href="../navigation/accordion.html">Accordion</a></li>
+                <li><a href="../navigation/autocomplete.html">Autocomplete</a></li>
+                <li><a href="../navigation/button.html">Button</a></li>
+                <li><a href="../navigation/checkboxradio.html">Checkboxradio</a></li>
+                <li><a href="../navigation/controlgroup.html">Controlgroup</a></li>
+                <li><a href="../navigation/datepicker.html">Datepicker</a></li> 
+                <li><a href="../navigation/dialog.html">Dialog</a></li>   
+                <li><a href="../navigation/menu.html">Menu</a></li>   
+                <li><a href="../navigation/progressbar.html">Progressbar</a></li>   
+                <li><a href="../navigation/selectmenu.html">Selectmenu</a></li>   
+                <li><a href="../navigation/slider.html">Slider</a></li>   
+                <li><a href="../navigation/spinner.html">Spinner</a></li>   
+                <li><a href="../navigation/tabs.html">Tabs</a></li>   
+                <li><a href="../navigation/tooltip.html">Tooltip</a></li>   
+
+            </ul>
+        </nav>
+        
+
+        <article>
+            <div class="cont">
+              <h1 align="left">PROGRESS BAR</h1>
+              <p><i>Displays collapsible content panels for presenting information in a limited amount of space.</i></p>
+            </div>
+            <br>
+            <br>
+            <div class="sample">
+                <h3>Examples</h3>
+                <br>
+                <br>
+    
+                <ul>
+                    <li><a href="">Default Functionality</a></li>
+                    <li><a href="">Custom Label</a></li>
+                    <li><a href="">Download Dialog</a></li>
+                    <li><a href="">Indeterminate Value</a></li>
+                  
+                    
+                </ul>
+            </div>
+            <fieldset class="box">
+                <div id="progressbar"><div class="progress-label">Loading...</div></div>
+            </fieldset>
+
+    
+
+
+           <p>Default determinate progress bar.</p>
+
+        </article>
+    </section>
+
+
+
+
+
+</body>
+</html>

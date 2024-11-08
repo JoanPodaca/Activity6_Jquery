@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.css"></script> 
+      
+</head>
+
+<style>
+    .collapsible {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid black;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        margin-top: 5px;
+
+    }
+
+    .active, .collapsible:hover {
+        background-color: #992400;
+    }
+
+    .content {
+        padding: 0 15px;
+        display: none; /* Initially hidden */
+        overflow: hidden;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+    }
+
+    .content p {
+        margin: 10px 0;
+    }
+
+    
+
+</style>
+
+<body>
+     <header
+        <h1 align=" center">JQUERY - JOAN PODACA</h1>
+ 
+    </header>
+    <section>
+        <nav class="navbar">
+            <ul>
+                <h3 class="wid">Widgets</h3>
+                <li><a href="../navigation/accordion.html">Accordion</a></li>
+                <li><a href="../navigation/autocomplete.html">Autocomplete</a></li>
+                <li><a href="../navigation/button.html">Button</a></li>
+                <li><a href="../navigation/checkboxradio.html">Checkboxradio</a></li>
+                <li><a href="../navigation/controlgroup.html">Controlgroup</a></li>
+                <li><a href="../navigation/datepicker.html">Datepicker</a></li> 
+                <li><a href="../navigation/dialog.html">Dialog</a></li>   
+                <li><a href="../navigation/menu.html">Menu</a></li>   
+                <li><a href="../navigation/progressbar.html">Progressbar</a></li>   
+                <li><a href="../navigation/selectmenu.html">Selectmenu</a></li>   
+                <li><a href="../navigation/slider.html">Slider</a></li>   
+                <li><a href="../navigation/spinner.html">Spinner</a></li>   
+                <li><a href="../navigation/tabs.html">Tabs</a></li>   
+                <li><a href="../navigation/tooltip.html">Tooltip</a></li>   
+
+            </ul>
+        </nav>
+
+        <article>
+            <div class="cont">
+              <h1 align="left">ACCORDION</h1>
+              <p><i>Displays collapsible content panels for presenting information in a limited amount of space.</i></p>
+            </div>
+            <br>
+            <br>
+
+            <div class="sample">
+                <h3>Examples</h3>
+                <br>
+                <br>
+
+                <ul>
+                    <li><a href="">Default Functionality</a></li>
+                    <li><a href="">Collapse Content</a></li>
+                    <li><a href="">Customize Icon</a></li>
+                    <li><a href="">Fill Space</a></li>
+                    <li><a href="">No auto Height</a></li>
+                    <li><a href="">Sortable</a></li>
+                </ul>
+            </div>
+            
+            <div class="scrollablebox">
+                <button class="collapsible">Section 1</button>
+                <div class="content">
+                    <p> <p>This box has a vertical scrollbar. If the content exceeds the height, you can scroll through it.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aenean ut nisi sit amet libero sagittis mollis. Suspendisse sollicitudin ante vel ante ultricies, ac sollicitudin odio tincidunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aenean ut nisi sit amet libero sagittis mollis. Suspendisse sollicitudin ante vel ante ultricies, ac sollicitudin odio tincidunt.</p></p>
+                </div>
+                
+                <button class="collapsible">Section 2</button>
+                <div class="content">
+                    <p> <p>This box has a vertical scrollbar. If the content exceeds the height, you can scroll through it.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aenean ut nisi sit amet libero sagittis mollis. Suspendisse sollicitudin ante vel ante ultricies, ac sollicitudin odio tincidunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aenean ut nisi sit amet libero sagittis mollis. Suspendisse sollicitudin ante vel ante ultricies, ac sollicitudin odio tincidunt.</p></p>
+                </div>
+                
+                <button class="collapsible">Section 3</button>
+                <div class="content">
+                    <p>Content of Section 3...</p>
+                </div>
+
+                <button class="collapsible">Section 4</button>
+                <div class="content">
+                    <p>Content of Section 4...</p>
+                </div>
+
+                <button class="collapsible">Section 5</button>
+                <div class="content">
+                    <p>Content of Section 5...</p>
+                </div>
+
+                <button class="collapsible">Section 6</button>
+                <div class="content">
+                    <p>Content of Section 6...</p>
+                </div>
+
+                <button class="collapsible">Section 7</button>
+                <div class="content">
+                    <p>Content of Section 7...</p>
+                </div>
+
+            </div>
+            <script>
+                // JavaScript to toggle the display of each content section
+                const collapsibles = document.querySelectorAll(".collapsible");
+                
+                collapsibles.forEach(button => {
+                    button.addEventListener("click", function() {
+                        this.classList.toggle("active"); // Toggle active class for styling
+                        const content = this.nextElementSibling; // Select the content div
+            
+                        // Toggle between showing and hiding the content
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                });
+            </script>
+
+           <p>Because the accordion is comprised of block-level elements, by default its width fills the available horizontal space. To fill the vertical space allocated by its container, set the heightStyle option to "fill", and the script will automatically set the dimensions of the accordion to the height of its parent container.</p>
+
+        </article>
+    </section>
+
+
+
+
+
+</body>
+</html>

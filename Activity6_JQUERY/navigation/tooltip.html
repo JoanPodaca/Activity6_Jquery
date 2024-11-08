@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/jquery-ui.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    
+    <script>
+        $( function() {
+            $( "#show-option" ).tooltip({
+                show: {
+                    effect: "slideDown",
+                    delay: 250
+                }
+            });
+            $( "#hide-option" ).tooltip({
+                hide: {
+                    effect: "explode",
+                    delay: 250
+                }
+            });
+            $( "#open-event" ).tooltip({
+                show: null,
+                position: {
+                    my: "left top",
+                    at: "left bottom"
+                },
+                open: function( event, ui ) {
+                    ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+                }
+            });
+            
+            // jQuery UI Tabs
+            $( "#tabs" ).tabs({
+                collapsible: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 align="center">JQUERY - JOAN PODACA</h1>
+    </header>
+    
+    <section>
+        <nav class="navbar">
+            <ul>
+                <h3 class="wid">Widgets</h3>
+                <li><a href="../navigation/accordion.html">Accordion</a></li>
+                <li><a href="../navigation/autocomplete.html">Autocomplete</a></li>
+                <li><a href="../navigation/button.html">Button</a></li>
+                <li><a href="../navigation/checkboxradio.html">Checkboxradio</a></li>
+                <li><a href="../navigation/controlgroup.html">Controlgroup</a></li>
+                <li><a href="../navigation/datepicker.html">Datepicker</a></li> 
+                <li><a href="../navigation/dialog.html">Dialog</a></li>   
+                <li><a href="../navigation/menu.html">Menu</a></li>   
+                <li><a href="../navigation/progressbar.html">Progressbar</a></li>   
+                <li><a href="../navigation/selectmenu.html">Selectmenu</a></li>   
+                <li><a href="../navigation/slider.html">Slider</a></li>   
+                <li><a href="../navigation/spinner.html">Spinner</a></li>   
+                <li><a href="../navigation/tabs.html">Tabs</a></li>   
+                <li><a href="../navigation/tooltip.html">Tooltip</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <div class="cont">
+                <h1 align="left">TOOL TIP</h1>
+                <p><i>Displays collapsible content panels for presenting information in a limited amount of space.</i></p>
+            </div>
+            <br>
+            <br>
+            <div class="sample">
+                <h3>Examples</h3>
+                <br>
+                <br>
+
+                <ul>
+                    <li><a href="">Default Functionality</a></li>
+                    <li><a href="">Custom animation Demo</a></li>
+                    <li><a href="">Custom Content</a></li>
+                    <li><a href="">Custom Styling</a></li>
+                    <li><a href="">Forms</a></li>
+
+                    
+                </ul>
+            </div>
+            <fieldset class="box">
+                <p>There are various ways to customize the animation of a tooltip.</p>
+                <p>You can use the <a id="show-option" href="https://jqueryui.com/demos/tooltip/#option-show" title="slide down on show">show</a> and
+                <a id="hide-option" href="https://jqueryui.com/demos/tooltip/#option-hide" title="explode on hide">hide</a> options.</p>
+                <p>You can also use the <a id="open-event" href="https://jqueryui.com/demos/tooltip/#event-open" title="move down on show">open event</a>.</p>
+            </fieldset>
+            <p>Hover the links above or use the tab key to cycle the focus on each element.</p>
+
+
+        </article>
+    </section>
+</body>
+</html>

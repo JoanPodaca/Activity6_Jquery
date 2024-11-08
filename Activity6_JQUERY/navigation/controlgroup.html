@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.css"></script> 
+      
+</head>
+
+<style>
+    .ui-controlgroup {
+	vertical-align: middle;
+	display: inline-block;
+}
+.ui-controlgroup > .ui-controlgroup-item {
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+}
+.ui-controlgroup > .ui-controlgroup-item:focus,
+.ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+	z-index: 9999;
+}
+.ui-controlgroup-vertical > .ui-controlgroup-item {
+	display: block;
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+    
+
+</style>
+
+<body>
+     <header
+        <h1 align=" center">JQUERY - JOAN PODACA</h1>
+ 
+    </header>
+    <section>
+        <nav class="navbar">
+            <ul>
+                <h3 class="wid">Widgets</h3>
+                <li><a href="../navigation/accordion.html">Accordion</a></li>
+                <li><a href="../navigation/autocomplete.html">Autocomplete</a></li>
+                <li><a href="../navigation/button.html">Button</a></li>
+                <li><a href="../navigation/checkboxradio.html">Checkboxradio</a></li>
+                <li><a href="../navigation/controlgroup.html">Controlgroup</a></li>
+                <li><a href="../navigation/datepicker.html">Datepicker</a></li> 
+                <li><a href="../navigation/dialog.html">Dialog</a></li>   
+                <li><a href="../navigation/menu.html">Menu</a></li>   
+                <li><a href="../navigation/progressbar.html">Progressbar</a></li>   
+                <li><a href="../navigation/selectmenu.html">Selectmenu</a></li>   
+                <li><a href="../navigation/slider.html">Slider</a></li>   
+                <li><a href="../navigation/spinner.html">Spinner</a></li>   
+                <li><a href="../navigation/tabs.html">Tabs</a></li>   
+                <li><a href="../navigation/tooltip.html">Tooltip</a></li>   
+
+            </ul>
+        </nav>
+
+        <article>
+            <div class="cont">
+              <h1 align="left">CONTROL GROUP</h1>
+              <p><i>Groups multiple buttons and other widgets into one visual set.</i></p>
+            </div>
+            <br>
+            <br>
+            <div class="sample">
+                <h3>Examples</h3>
+                <br>
+                <br>
+
+                <ul>
+                    <li><a href="">Default Functionality</a></li>
+                    <li><a href="">Spli Button</a></li>
+                    <li><a href="">Toolbar</a></li>
+                    
+                </ul>
+            </div>
+            <fieldset class="box">
+                <fieldset>
+                    <legend>Rental Car</legend>
+                    <div class="controlgroup">
+                        <select id="car-type">
+                            <option>Compact car</option>
+                            <option>Midsize car</option>
+                            <option>Full size car</option>
+                            <option>SUV</option>
+                            <option>Luxury</option>
+                            <option>Truck</option>
+                            <option>Van</option>
+                        </select>
+                        <label for="transmission-standard">Standard</label>
+                        <input type="radio" name="transmission" id="transmission-standard">
+                        <label for="transmission-automatic">Automatic</label>
+                        <input type="radio" name="transmission" id="transmission-automatic">
+                        <label for="insurance">Insurance</label>
+                        <input type="checkbox" name="insurance" id="insurance">
+                        <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+                        <input id="horizontal-spinner" class="ui-spinner-input">
+                        <button>Book Now!</button>
+                    </div>
+                </fieldset>
+                
+            </fieldset>
+        
+            
+
+           <p>A controlgroup featuring various form controls. The first features a horizontal toolbar like orientation, the second is in a space saving vertical orientation for usages like mobile devices and panels.</p>
+
+        </article>
+    </section>
+
+
+
+
+
+</body>
+</html>
